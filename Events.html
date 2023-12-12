@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function newscreen(){
+            document.bgColor="Orange";
+            window.setTimeout("newscreen1()",2000);
+        }
+        function newscreen1(){
+            document.bgColor="purple";
+        }
+    </script>
+</head>
+<body onload="newscreen()" onunload="alertme()">
+    <!-- Events -->
+    <!--
+     1.Mouse
+     2.Key
+     3.window
+     4.Form    
+    -->
+    <p id="demo" onmousedown="mouseDown()" onmouseup="mouseUp()">Mouse up and Mouse Down</p>
+    <script>
+        // Mouse event
+        function mouseDown(){
+            document.getElementById("demo").style.color='red';
+        }
+        // mouse up
+        function mouseUp(){
+            document.getElementById("demo").style.color="blue";
+        }
+    </script>
+    <p id="d1">Show context menu</p>
+    <p id="d2">don't show context menu</p>
+    
+    <script>
+      var a=document.getElementById("d2");
+      a.addEventListener("contextmenu",(e)=>{
+        e.preventDefault();
+      })
+    </script>
+
+    <!-- On mouse Enter and on leave -->
+    <img src="download.jpeg" onmouseenter="bigimage(this)" onmouseleave="smallimage(this)">
+    <img src="download.jpeg" onmouseover="Zoomin(this)" onmouseout="Zoomout(this)">
+    <script>
+        function bigimage(x){
+            x.style.height="600px";
+            x.style.width="600px";
+        }
+        function smallimage(x){
+            x.style.height="100px";
+            x.style.width="100px";
+        }
+        function Zoomin(x){
+            x.style.height="800px";
+            x.style.width="800px";
+        }
+        function Zoomout(x){
+            x.style.height="50px";
+            x.style.width="50px";
+        }
+    </script>
+
+    <!-- Keyboard Events -->
+    <label >Key down</label>
+    <input type="text" onkeydown="down()" id="demo">
+    <p id="p1"></p>
+    <label >Key press</label>
+    <input type="text" onkeypress="press()" id="demo">
+    <label >Key up</label>
+    <input type="text" onkeyup="up()" id="demo1">
+    <script>
+    function down(){
+       document.getElementById("p1").innerHTML="You have pressed Key";
+    }
+    //on key press
+    function press(){
+        alert("Enter Your Name");
+    }
+    //on key up
+    function up(){
+      let x= document.getElementById("demo1");
+      x.value=x.value.toUpperCase();
+    }
+</script>
+
+<!-- Form Events -->
+
+
+<select id="car" onchange="get()">
+    <option value="audi">Audi</option>
+    <option value="ferrari">Ferrari</option>
+    <option value="rollsroyce">Rolls Royce</option>
+</select>
+<p id="p4"></p>
+<script>
+    // 
+    function get(){
+        let car1=document.getElementById("car").value;
+        // alert(`You have selected item is : ${car1}`);
+        document.getElementById("p4").innerHTML=(`You have selected item is : ${car1}`)
+
+    }
+</script>
+<!-- On Focus -->
+<label >On Focus</label>
+<input type="text" id="input11" onfocus="foc(this.id)">
+
+<script>
+    function foc(a){
+        document.getElementById(a).style.background="Red";
+    }
+</script>
+<!-- On Blur -->
+<input type="text" id="Input12" onblur="blur1()">
+<script>
+    function blur1(){
+        let m=document.getElementById("Input12");
+        m.value=m.value.toUpperCase();
+        m.style.color="violet";
+    }
+</script>
+<!-- Submit -->
+<form onsubmit="sub()">
+    <label >Name</label>
+    <input type="text" placeholder="Enter your name" required>
+    <button>Submit</button>
+</form>
+<script>
+    function sub(){
+        alert(`Thanks for form filling`);
+    }
+</script>
+
+<!-- Window Events -->
+
+<p id="P7"></p>
+<script>
+    function display(){
+    let v= window.outerWidth;
+    let h =window.outerHeight;
+    let t="Window Height"+h+"Window Width"+v;
+    document.getElementById("P7").innerHTML=t;
+    }
+    window.onresize=display;
+</script>
+</body>
+</html>

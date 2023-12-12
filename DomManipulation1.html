@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dommanipulation</title>
+</head>
+<body>
+    <div id="demo">
+    <h1>Dom manipulation</h1>
+    <p>Sample paragraph </p>
+    </div>
+    <button onclick="show()">create element</button>
+    <script>
+        function show(){
+            // let a=document.createElement("div");
+            // it use to calling child
+            // let b=document.createTextNode("Hi Robin");
+            // a.appendChild(b);
+            // let c=document.getElementById("demo");
+            // document.body.insertBefore(a,c);
+            
+            let a=document.createElement("p");
+            let b=document.createTextNode("Hi Robin how are u my self jarvis");
+            a.appendChild(b);
+            let c=document.getElementById("demo");
+            document.body.insertBefore(a,c);
+        }
+    </script>
+</body>
+</html>

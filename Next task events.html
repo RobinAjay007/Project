@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          div{
+            padding:  30px;
+            display: inline-block;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        div :hover{
+            background-color: orange;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div > 1
+        <div >
+            2
+            <div >
+                3
+                <div >4
+                    <div>
+                        5
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+       </div>
+       <section id="log">
+
+       </section>
+<script>
+    let logelement = document.getElementById("log");
+
+    function log(msg){
+        logelement.innerHTML += ('<p>'+ msg + '</p>');
+    }
+    function capture(){
+        log('Capture : '+ this.firstChild.nodeValue.trim());
+    }
+
+    function bubble(){
+        log('Bubble : '+ this.firstChild.nodeValue.trim());
+    }
+
+    let a = document.getElementsByTagName("div");
+
+    for( let i=0; i< a.length;i++){
+        a[i].addEventListener('click',capture,true);
+        a[i].addEventListener('click',bubble,false);
+    }
+
+</script>
+</body>
+</html>

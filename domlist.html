@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Student list</h1>
+    <label for="">Enter student name</label>
+    <input type="text" id="getvalue">
+    <button >Add student</button>
+</div>
+
+<ul></ul>
+    <script>
+        var a=document.querySelector('ul');
+        var b=document.querySelector('input');
+        //add event lister
+        var btn=document.querySelector('button');
+        btn.addEventListener("click",()=>{
+            alert ("Hi");
+            const item=b.value;
+            b.vale="";
+            alert(item);
+            let listitem=document.createElement('li');
+            let listtext=document.createElement("span")
+            var btn1= document.createElement("button");
+            a.appendChild(listitem);
+            listitem.appendChild(listtext);
+            console.log(listitem)
+            listtext.textContent=item;
+            listitem.appendChild(btn1);
+            btn1.textContent="Delete student";
+
+            //delete 
+
+            btn1.addEventListener("click",()=>{
+                a.removeChild(listitem);
+            })
+            b.focus();
+
+        })
+
+    </script>
+</body>
+</html>

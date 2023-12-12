@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Nagavigation</title>
+</head>
+<body>
+    <div id="allin">
+        Hello world
+        <img src="#">
+        <h2 id="demo"> Welcome All</h2>
+        <p id="sample"><span>Hi</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quos, animi quibusdam maxime maiores cupiditate doloremque incidunt repudiandae in dolore, magnam veritatis earum libero magni aperiam ut reiciendis officiis aliquam!</p>
+    </div>
+    <script>
+        var a=document.getElementById("allin");
+        console.log(a.firstChild.nodeName);
+        console.log(document.body.firstChild.nodeName);
+        console.log(a.firstElementChild.nodeName);
+        console.log(document.body.lastElementChild.nodeName);
+        
+        if(a.hasChildNodes){
+            let n1=a.childNodes;
+            for(let i=0; i<n1.length;i++){
+                console.log(n1[i].nodeName)
+
+            }
+        }
+        console.log(a.parentNode.nodeName);
+        let b=document.getElementById("sample");
+        console.log(b.parentNode.nodeName);
+        console.log(document.documentElement.parentNode.nodeName);
+        console.log(head.nextSibiling.nodeName);
+        console.log(head.nextElementSibiling.nodeName);
+        console.log(head);
+    </script>
+</body>
+</html>

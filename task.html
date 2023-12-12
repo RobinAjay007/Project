@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student=("Ajay","Yukeshwaran","Thalha","TonyStark");
+        
+        //Find longest name
+        
+        function findmax(Array){
+            var long=[];
+
+            for(i=0;i<student.length;i++){
+                const stud=Array[i];
+                if(long.length<stud.length){
+                    long=stud;
+                }
+                return long;
+            }
+
+        };
+        var a=findmax(student);
+
+        document.write(a);
+
+//         //find shortest name
+//             function findmin(Array){
+//             var short=Array[0];
+//             for(i=1;i<student.length;i++){
+//                 const stud1=Array[i];
+//                 if(short.length>stud1.length){
+//                     short=stud1;
+//                 }
+//             }return short;
+//         }
+//         document.write(findmin(student)+"<br>");
+//         //index of element
+//         var student1=student.indexOf("Thalha");
+//         document.write(student1+"<br>");
+//         //sort
+//         var sort1=student.sort();
+//         document.write(sort1+"<br>");
+//         //to uppercase
+//         for(i=0;i<student.length;i++){
+//             const stud2=student[i];
+//             document.write(stud2.toUpperCase()+",");
+
+//         }
+
+    </script>
+    
+</body>
+</html>

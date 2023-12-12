@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomEvents</title>
+    <style>
+        div,p,a{
+            padding: 150px 30px;
+            display: block;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div> DIV
+        <p>P <a href="#">A</a></p>
+        
+    </div><BR><h3>Bubbling</h3></BR>
+    <div onclick="alert('bubbling'+this.tagName)"> DIV
+     <p onclick="alert('bubbling'+this.tagName)">P
+        <a href="#" onclick="alert('bubbling'+this.tagName)">A</a>
+     </p>
+    </div>
+    <!-- <script>
+        function show(){
+            alert("Capturing"+this.tagName);
+        }
+
+        let a= document.querySelectorAll("div,p,a");
+        for(let i of a){
+            i.addEventListener("click",show,true);
+        }
+    </script> -->
+</body>
+</html>
