@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var library={
+        //     Title:"JavaScript Notes",
+        //     Author:"Ajay",
+        //     Reading_Staus:true,
+        //     Price:function(){
+        //         alert(this.Title);
+        //     }
+
+        // };
+        // console.log(library.Reading_Staus);
+        // library.Price();
+
+        var library2=[{
+            Title:"JavaScript Notes",
+            Author:"Ajay",
+            Reading_Staus:true,
+            Price:function(){
+                alert(this.Title);
+            },
+
+        },
+        {
+            Title:"Python Notes",
+            Author:"Robin",
+            Reading_Staus:false,
+            Price:function(){
+                alert(this.Title);
+            }
+        }
+
+    ];
+    // console.log(library2);
+    // document.write(library2[1].Title+"<br>"+"<br>");
+
+    for(var i=0; i<library2.length;i++){
+        var book=library2[i].Title+"--"+library2[i].Author;
+        // document.write(book+"<br>");
+
+        if(library2[i].Reading_Staus==true){
+            document.write(book+"--"+"This book is not reading"+"<br>");
+        }
+        else{
+            document.write(book+"--"+"This book was reading");
+        }
+    }
+
+    </script>
+</body>
+</html>

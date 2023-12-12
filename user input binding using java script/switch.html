@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Number</label>
+        <input type="number" id="frst"><br>
+        <label>Number1</label>
+        <input type="number" id="sec"><br>
+        <label>Operator</label>
+        <input type="text" id="op"><br>
+        <button type="submit" onclick="cal()">submit</button>
+    </form>
+    <script>
+       
+
+       function cal(){
+                    var a=parseInt(document.getElementById("frst").value);
+                    var b=parseInt(document.getElementById("sec").value);
+                    var c=document.getElementById("op").value;
+        switch(c){
+            case '+':
+                var total=a+b;
+                document.write(total);
+                break;
+            case '-':
+            var total=a-b;
+                document.write(total);
+                break;
+            case '*':
+            var total=a*b;
+                document.write(total);
+                break;
+            case '/':
+                var total=a/b;
+                document.write(total);
+                break;
+            default:
+                document.write("Not valid");
+
+        }
+       }
+    </script>
+</body>
+</html>

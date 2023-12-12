@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        function selectgender(){
+            var a=document.getElementById("gender");
+            var selectitems=a.options[a.selectedIndex].value;
+            alert("Your selected Gender is :"+selectitems);
+        }
+    </script> -->
+</head>
+<body>
+    <!-- <label>Gender</label>
+    <select name="gender" id="gender" onchange="selectgender()">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select> -->
+    <!-- <label >Country</label>
+    <label>India</label>
+    <input type="radio" value="india" name="Country">
+    <label>London</label>
+    <input type="radio" value="london" name="Country"> -->
+
+    <label >Checkbox</label>
+    <label>India</label>
+    <input type="checkbox" value="india" id="demo">
+    <label>London</label>
+    <input type="checkbox" value="london" id="demo2">
+    <label>America</label>
+    <input type="checkbox" value="america" id="demo1">
+
+    <button type="submit" onclick="geti()">submit</button>
+    <script>
+        // function geti(){
+        //     var a=document.getElementsByName("Country");
+
+
+        //     for(let i=0; i<a.length;i++){
+        //         if(a[i].checked){
+        //             alert(a[i].value);
+        //         }
+        //     }
+        // }
+
+        function geti(){
+            var a=document.getElementById("demo");
+            var b=document.getElementById("demo1");
+            var c=document.getElementById("demo2");
+
+
+            if(a.checked==true&&b.checked==true&&c.checked==true){
+                // alert("choose the item is :"+a.value);
+                alert("choose One ");
+            }
+            else if(a.checked==true){
+                alert("choose the item is :"+a.value);
+            }
+            else if(b.checked==true){
+                alert("choose the item is :"+b.value);
+            }
+            else if(c.checked==true){
+                alert("choose the item is :"+c.value);
+            }
+            else{
+                alert("choose correct option");
+            }
+        }
+    </script>
+</body>
+</html>

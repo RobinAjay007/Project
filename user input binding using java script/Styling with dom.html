@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio atque totam nihil illo quis distinctio quod quas cupiditate est debitis. Perspiciatis possimus aliquid aperiam at minus et id delectus tempora.</p>
+    <div id="all">
+    <h3 id="hwad">Welcome</h3>
+    <p id="p1">Hi ! how are you</p>
+</div>
+
+    <script>
+        let a=document.getElementById("demo");
+        a.style.color="red";
+        document.write(a.style.color);
+        a.style.background="purple";
+        a.style.fontWeight='bold';
+
+        //computer styling
+
+        let b=window.getComputedStyle(a);
+        document.write(b.getPropertyValue("color"));
+        document.write(b.getPropertyValue("background-color"));
+        document.write(b.getPropertyValue("Font-weight"));
+        // Show first child
+        let c= document.getElementById("all");
+        console.log(c.firstElementChild.nodeName);
+        //show  next sibiling element
+        let d=document.getElementById("hwad");
+        console.log(d.nextElementSibling.nodeName);
+
+        //Add event listener
+       var p=document.getElementById("p1");
+    //    p.addEventListener('click',()=>{
+    //     alert("hi");
+    //    });
+
+       function add(){
+        document.write(20+30);
+       }
+       p.addEventListener('click',add);
+    </script>
+    <p id="p2"> Satoru Gojo</p>
+    <b id="bo"></b>
+    <script>
+        //use to find type
+        let x = document.getElementById('p2');
+        x.addEventListener('dblclick',deletedata);
+        function deletedata(e){
+            document.getElementById('bo').innerHTML+='Type of event'+e.type;
+            x.removeEventListener('dblclick',deletedata);
+        }
+    </script>
+</body>
+</html>
