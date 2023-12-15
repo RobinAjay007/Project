@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        function greetconsole(name){
+            console.log("hello",name);
+        }
+
+        function greetheadinghtml(name){
+            let a = document.querySelector("h1");
+            a.innerHTML= `Hi ${name}`;
+        }
+
+        function greet(Callback){
+            Callback('Ajay');
+        }
+
+        greet(greetconsole);
+        greet(greetheadinghtml);
+        
+        let local = ()=>{
+            console.log("hi")
+        }
+        local()
+        let Ajay=()=>{
+
+        }
+      
+
+        // for each
+
+        arr =['Ajay','Robin','History','Evolution'];
+        arr.forEach(print);
+
+        function print(val){
+            console.log(val);
+        }
+        // using arrow function
+        arr.forEach(val =>{
+            console.log(val);
+        })
+
+        arr .forEach((val,index,arr) =>{
+            arr.index = val.toUpperCase();
+        })
+        console.log(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student=["Ajay","Robin","Mohammed Thalha","aj","Ajay Dev","Rajaveriprabhu"];
+        //Longest Name
+         function findlongvalue(name){
+           var long=name[0].length;
+           var ans=name[0];
+           for( let i=1;i<name.length;i++){
+               var maxi=name[i].length;
+               if(maxi>long){
+                ans=name[i];
+               }
+           }
+           return ans
+        }
+        //Shortest Name
+        function findsmallvalue(name){
+           var long=name[0].length;
+           var Ajay=name[0];
+           for( let i=1;i<name.length;i++){
+               var maxi=name[i].length;
+               if(maxi<long){
+                Ajay=name[i];
+               }
+           }
+           return Ajay
+        }
+
+      var output=  findlongvalue(student);
+      console.log(output);
+      var output1=  findsmallvalue(student);
+      console.log(output1);
+      
+        //index position
+        var findind=student.indexOf("aj");
+        console.log(findind);
+        //change upper case
+        for(let i=0;i<student.length;i++){
+            const upp=student[i];
+            console.log(upp.toUpperCase()+",");
+            document.write(upp.toUpperCase()+",");
+        }
+        //sort Alphabatic
+        var correctalpha=student.sort();
+        console.log(correctalpha);
+
+
+    </script>
+</body>
+</html>

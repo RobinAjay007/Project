@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Regular Expression -->
+
+    <input type="text" id="demo">
+    <button onclick="show()">Submit</button>
+
+    <br>
+
+    <p>\s-White space
+        \S-Non White space
+        \d- digits
+        \D- not a digits
+        \w - Word
+        \W-Not a Word
+        \g-global
+    </p>
+
+    <script>
+       // forward \ using only dot (.) coming
+        var a= "Mr.Ajay"
+        var regex = /^Mr\./
+
+        if(regex.test(a)){
+            console.log("Match found");
+        }
+        else{
+            console.log("Match Notfound");
+        }
+
+
+        var b = new RegExp("^Mr\\.");
+        // var b = new RegExp("Ajay");
+
+        if(b.test(a)){
+            console.log("Match found")
+        }
+        else{
+            console.log("Match no found")
+        }
+
+       function show(){
+        var req = document.getElementById("demo").value;
+        
+        var y = /@/;
+
+        if(y.test(req)){
+            alert("Login sucessfull");
+        }
+        else{
+            alert("Use @ symbol");
+        }
+
+       }
+
+
+       var s = /ca[kf]e/
+
+       var r = "He was eating cake in cafe";
+
+       if(s.test(r)){
+
+        document.write("Match found")
+       }
+       else{
+        document.write("Match not found")
+       }
+
+
+
+       var regularex = /\s/g;
+
+       var dd = "was joking of class";
+
+       var repl = "*";
+
+       document.write(dd.replace(regularex,repl)+"<br>");
+
+       document.write(dd.replace(/ /g,"%"));
+
+
+       var g = /e$/
+
+       var arr = ["Ajay","Replace","file","fine"];
+        arr.forEach(val=>{
+            if(g.test(val)){
+                document.write(val)
+            }
+        })
+
+
+        var color ="Robin is a gojo. Animal kiis everyone";
+// i incase senctive
+        var capa = /gojo/gi;
+
+        if(capa.test(color)){
+            document.write("Found");
+        }
+        else{
+            document.write("not found");
+        }
+
+
+        document.write(color.match(capa).length);
+
+
+        // Alternative
+
+        let str = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti est veniam aspernatur. Natus corrupti distinctio veniam quis. Natus ipsum numquam minima ipsam doloremque error in eligendi tempore magni! Enim?";
+        
+        var g = /Lorem/gi;
+
+        var match = str.match(g);
+
+        var j = /(\bLorem\w*)/g;
+
+        var replace = "Hollywood"
+
+        var match2 = str.replace(j,replace);
+
+        console.log(match2);
+
+        console.log(match);
+
+
+    </script>
+</body>
+</html>

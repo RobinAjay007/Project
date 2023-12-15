@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student={
+            name:"Robin",
+            age:20,
+            gender:"Male"
+        };  
+        document.write(student.name+"<br>");
+        document.write(student.age+"<br>");
+
+        var book={
+            Authorname:"Robin Hood",
+            Bookname:"The Valatine",
+            Year:2023,
+            displaydata:function(){
+                console.log("authoname",this.Authorname);
+            }
+        };
+        book.displaydata();
+
+        document.write("Name of Author :"+" "+book.Authorname+"<br>");
+        document.write("Name of Book :"+" "+book.Bookname+"<br>");
+        document.write("Name of Year :"+" "+book.Year+"<br>");
+        //change data
+        book["Year"]=2020;
+        document.write("Name of Year :"+" "+book.Year+"<br>");
+        // Add data
+        book.genere="Love";
+        console.log(book);
+        document.write("Genere of Book :"+" "+book.genere);
+        // get data to user to get value
+        var key=prompt("Enter the Data to be found");
+        alert(book[key]);
+        // delete the data
+        delete book.Year;
+        console.log(book);
+
+        var person={
+            name:"person1",
+            age:20,
+            gender:"Male",
+            show:function(){
+                alert(this.name);
+            }
+        };
+        person.show();
+        person["show"]();
+
+        var user=person;
+        console.log(user.name);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            padding: 150px 30px;
+            display: block;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"> DIV
+        <p >P
+           <a href="#">A</a>
+        </p>
+       </div>
+       <script>
+        //
+        let div = document.getElementById("wrap");
+
+        //
+
+        div.onclick = function(event){
+            event.target.style.backgroundColor = "Red";
+
+            //
+
+            setTimeout(()=>{
+                alert("Target ="+ event.target.tagName + ", this = "+ this.tagName);
+
+                event.target.style.backgroundColor = 'orange';
+            },0);
+
+        }
+
+       </script>
+</body>
+</html>

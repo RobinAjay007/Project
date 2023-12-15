@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoM</title>
+    <!-- <style>
+        body{
+            min-height: 2000px;
+        }
+    </style> -->
+</head>
+<body>
+    <!--
+    1.window object
+    2.screen object
+    3.location
+    4,history
+    5.navigation
+    
+    
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, incidunt nihil. Eos ipsa quisquam vel? Voluptatibus labore at incidunt assumenda vel dicta repudiandae. Velit, asperiores reprehenderit? Sunt facilis aliquid suscipit?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ea ipsam sequi minima. Nostrum in tempore distinctio minima numquam a impedit quibusdam tenetur accusantium? Vero deleniti debitis iusto asperiores quam.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem aliquid corrupti excepturi quaerat, libero tenetur alias dolore facere assumenda officiis deserunt error eveniet praesentium laudantium nulla veniam minima optio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita exercitationem animi nam harum provident incidunt, corrupti libero blanditiis quam quibusdam deserunt pariatur! Dolore dolores reprehenderit nihil modi, architecto rem animi error. Ut dolorem illum ipsa! Doloribus velit commodi fuga maxime perspiciatis cum obcaecati reprehenderit explicabo, facilis iusto. Quae, ipsa facilis nesciunt iusto voluptatibus error ab et molestias ducimus, nostrum repudiandae quisquam veritatis praesentium unde voluptas ex sunt quia officiis aut. Soluta, adipisci mollitia voluptates repellendus nostrum illum magni, perferendis, nemo quibusdam recusandae animi tempora! Placeat, molestiae nemo omnis porro voluptatem dolorem dolor blanditiis expedita amet. Asperiores a animi id dolorum.
+    </p>
+    <button onclick="show()" id="demo">submit</button>
+    <br>
+    
+    <button onclick="show1()" id="demo1">submit</button>
+    <br>
+
+    <a href="https://www.facebook.com/login.php/?Ajay" id="Aj1">
+        <p id="Aj2"></p>
+    </a>
+
+    <br>
+
+    <button onclick="Var11()">Assign</button>
+    <button onclick="Var12()">Replace</button>
+    <button onclick="Var13()">Assign</button>
+    <br>
+    <button onclick="Backw()">Backward</button>
+    <br>
+    <button onclick="forw()">forward</button>
+    <script>
+
+        // Window object
+        // function show(){
+        //     var a = window.innerWidth;
+        //     var b = window.innerHeight;
+        //     alert("width :"+a + "height"+b);
+        // }
+
+        // function show1(){
+        //     var ale = document.documentElement.clientWidth;
+        //     var ale2 = document.documentElement.clientHeight;
+
+        //     alert(`clientwidth : ${ale} clientHeight : ${ale2}`);
+            
+        // }
+
+        // screen object
+
+        // function show(){
+        //     var a = screen.width;
+        //     var b = screen.height;
+        //     var c = screen.colorDepth;
+        //     var d = screen.pixelDepth;
+        //     alert("width :"+a+" " + "height"+b + "color depth is :"+c +"pixel depth is :"+d);
+        // }
+
+        // function show1(){
+        //     var ale = screen.availWidth;
+        //     var ale2 = screen.availHeight;
+
+        //     alert(`avail Width : ${ale} avail Height : ${ale2}`);
+            
+        // }
+
+        // navigator object
+
+        //  function show(){
+        //     if(navigator.onLine){
+        //         alert(`My application is online`);
+        //     }
+        //     else{
+        //         alert(`My application is offline`);
+        //     }
+        //  }
+
+         // cookies
+
+         function show1(){
+            if(navigator.cookieEnabled){
+                alert(`Enabled`);
+            }
+            else{
+                alert(`disabled`);
+            }
+         }
+
+         function show(){
+            alert(navigator.language);
+         }
+
+         function Aj(){
+            var eng = navigator.appName;
+            eng+= "\n"+navigator.appVersion;
+            eng+= "\n"+navigator.appCodeName;
+            eng+= "\n"+navigator.userAgent;
+            eng+= "\n"+navigator.platform;
+
+            alert(`browser informatio ${eng}`);
+         }
+        //  Aj()
+
+         function enab1(){
+            if(navigator.javaEnabled){
+                alert(`Enabled`);
+            }
+            else{
+                alert(`Disabled`);
+            }
+         }
+        //  enab1();
+
+         //Location
+    
+
+
+         function loc1(){
+            document.write( window.location.href);
+            document.write("<br>"+ window.location.protocol);
+            document.write("<br>"+ window.location.host);
+            document.write( "<br>"+window.location.hostname);
+            document.write( "<br>"+window.location.port);
+            document.write( "<br>"+window.location.pathname);
+            // new1+="\n"+window.location.protocol;
+            // new1+=window.location.hostname;
+            // new1+=window.location.host;
+            // new1+=window.location.port;
+            // new1+=window.location.pathname;
+            // alert(new1);
+            
+         }
+         loc1();
+
+
+         // History--Search
+         
+         let ari = document.getElementById("Aj1")
+
+         let demo3 = ari.search;
+
+         document.getElementById("Aj2").innerHTML = `The value is ${demo3}`
+
+
+         //Assign
+           function Var11(){
+            window.location.assign("https://www.facebook.com/login.php/")
+           }
+        // replace
+         function Var12(){
+
+            window.location.replace("https://www.google.co.in/");
+
+        }
+
+        //reload
+
+        function Var13(){
+        window.location.reload()
+
+        }
+
+
+        // History object
+
+        document.write(history.length);
+
+
+        // Foward button and backwardbutton using history function
+        function Backw(){
+            window.history.back();
+        }
+
+        function forw(){
+            window.history.forward();
+        }
+
+
+    </script>
+</body>
+</html>

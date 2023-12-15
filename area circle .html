@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Arrow function
+        let arr =[2,5,6,8,99];
+        let sumofArr = (arr) =>{
+           let  sum = 0;
+            for (let val of arr){
+                sum+=val
+            }
+            return sum  
+        }
+        console.log(sumofArr(arr));
+
+
+        // Area of circle
+
+        let area = (r) =>{
+           return Math.PI*r*r
+        }
+        console.log(area(5));
+
+        // variable aruments --- rest parameters
+        let result = 1;
+        let  prod = (...argus)=>{
+              for(let final of argus){
+                result*=final
+              }
+              return result
+        }
+        console.log(prod(5,6,7,8,3));
+
+        // or
+
+        
+        // let prod1 = ()=>{
+        //     result =1;
+        //     for(i=0;i<arguments.length;i++){
+        //         result*= arguments[i];
+        //     }
+        //     return result
+
+        // }
+        // console.log(prod1(5,6,7,8,3))
+
+        //generators - genrate value  one by one
+
+        function* indexgenerator(){
+            let index = 1;
+
+            while(true){
+                yield index++;
+            }
+
+        }
+        const gen = indexgenerator();
+        console.log(gen.next().value);
+    </script>
+</body>
+</html>

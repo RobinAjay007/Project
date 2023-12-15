@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="contactForm" onsubmit="return validateForm(event)" action="" method="post">
+        <h2>Application Form</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="row">
+            <label>Country</label>
+            <select name="country">
+                <option>Choose</option>
+                <option>Australia</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+            </select>
+            <div class="error" id="countryErr"></div>
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+<script>
+    function validateForm(e){
+    e.preventDefault();
+        var name=document.contactForm.name.value;
+        var email=document.contactForm.email.value;
+        var mobile=document.contactForm.mobile.value;
+        var country=document.contactForm.country.value;
+        var gender=document.contactForm.gender.value;
+        var hobbies=[];
+
+        //Hobbies
+        var checkbox=document.getElementsByName("hobbies[]");
+            for(i=0;i<checkbox.length;i++){
+                if(checkbox[i].checked){
+                    hobbies.push(checkbox[i].value);
+                }  
+            }
+            console.log(hobbies);
+            // alert("enter the name");
+
+        //validate name
+        var nameErr = emailErr=mobileErr=genderErr =countryErr=true;
+            if(name===""){
+                sample("nameErr","Enter a Name");
+                console.log(sample("nameErr","Enter a Name"));
+            }
+            else{
+                var regex=/^[a-zA-Z\s]+$/;
+                if(regex.test(name)==false){
+                    sample("nameErr","Enter a  valid Name");
+                }
+            //     else{
+            //         sample("nameErr","");
+            //         nameErr=false;
+            //     }
+            }
+
+        //validate email
+        var emailErr=true;
+            if(email===""){
+                 sample("emailErr","Enter a Email");
+            }
+            else{
+            var regex=/\S+@\S+\.\S+$/;
+            if(regex.test(email)==false){
+                sample("emailErr","Enter a Valid Email");
+            }
+            else{
+                sample("emailErr","");
+                emailErr=false;
+            }
+        }
+
+        // Validate Number
+        if(mobile==="")
+        {
+         sample("mobileErr","Enter a Phone Number");
+        }
+        else{
+            // var regex=/^\d{10}$/; use Either
+            var regex=/^[1-9]\d{9}$/;
+            if(regex.test(mobile)==false){
+                sample("mobileErr","Enter 10 Numbers");
+            }else{
+                sample("mobileErr","");
+                emailErr=false;
+            }
+        }
+
+        //Gender
+        if(gender===""){
+            sample("genderErr","Choose A gender");
+        }
+        else{
+            sample("genderErr","");
+            genderErr=false;
+        }
+
+        //country
+        if(country=="Choose"){
+            sample("countryErr","Choose A country");
+        }
+        else{
+            sample("countryErr","");
+            countryErr=false;
+        }
+
+    }
+
+        function sample(element,data)
+        {
+            var k=document.getElementById(element).innerHTML=data;
+        }
+
+    </script>
+    
+</body>
+</html>

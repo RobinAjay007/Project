@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a=[10];
+        // var b=[10,20,30,40,50,"Ajay"];
+        // var c=[a+b];
+        // console.log(a);
+        // console.log(b);
+        // document.write(b[5]+"<br>");
+        // document.write(b.length+"<br>");
+        // document.write(a+b+"<br>");
+        // console.log(typeof(c));
+
+        //Array methods
+
+        // var color=["Blue","Black","Red","Orange"];
+        // document.write(color[2]+"<br>");
+        // document.write(color.length+"<br>");
+        // var find=color[color.length-1];
+        // document.write(find+"<br>");
+
+        //unshift
+        var color=["Blue","Black","Red","Orange"];
+        color.unshift("Yellow");
+        document.write(color+"<br>");
+        //shift
+        color.shift();
+        document.write(color+"<br>");
+        //Pop--delete first element
+        color.pop();
+        document.write(color+"<br>");
+        //push--Insert last add
+        color.push("Purple");
+        document.write(color+"<br>");
+        // add item
+        color[2]="Magenta";
+        document.write(color+"<br>");
+        //delete
+        delete color[2];
+        document.write(color+"<br>");
+        //join
+        document.write(color.join("/")+"<br>");
+        //to string
+        // var z=color.toString();
+        // document.write(typeof(z));
+        //for loop
+        var e=[12,56,87,89,90];
+        for(let i=0;i<e.length;i++){
+            document.write(e[i]+"<br>");
+        }
+        //slice
+        document.write(e.slice(1,4)+"<br>");
+        document.write(e.slice(3)+"<br>");
+        document.write(e.slice(1,-1)+"<br>");
+        //index of
+        document.write(e.indexOf(12)+"<br>");
+        document.write(e.lastIndexOf(90)+"<br>");
+        //includes
+        document.write(e.includes(100)+"<br>");
+        document.write(e.includes(12)+"<br>");
+        //find
+        var inputs=["5",23,"12","7","8"];
+        // for(let i=0;i<input.length;i++){
+        //     document.write(i.find(5));
+        // }
+        var i1=inputs.findIndex(function(element){
+            return element=5;
+        })
+        document.write(i1+"<br>");
+        //filter
+        var i1=inputs.filter(function(e){
+            return e>5;
+        })
+        document.write(i1.length+"<br>");
+        //sort
+        var s=inputs.sort();
+        document.write(s+"<br>");
+        inputs.sort(function(a,b){
+            return a-b;
+        })
+        document.write(inputs+"<br>");
+
+        var Ab=inputs.reverse();
+        document.write(Ab+"<br>");
+        //find maximum number
+
+        function findmax(Array){
+            return Math.max.apply(null,Array);
+        }
+        document.write(findmax(Ab)+"<br>");
+
+        //find minimum
+        function findmin(Array){
+            return Math.min.apply(null,Array);
+        }
+        document.write(findmin(inputs));
+       
+    </script>
+</body>
+</html>

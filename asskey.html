@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ASCII CODE -->
+    <script>
+        // for(i=65;i<=200;i++){
+        //     console.log(String.fromCharCode(i));
+        // }
+
+
+        // let n=5;
+        // let string="";
+        // for(i=1;i<n;i++){
+        //     for(j=0;j<i;j++){
+
+        //         string+=String.fromCharCode(j+65)
+        //     }
+        //     string+="\n";
+        // }
+        // console.log(string);
+
+        let n=5;
+        let string="";
+        for(i=0;i<n;i++){
+            for(j=0;j<n-i;j++){
+                string+=" ";
+
+            }
+            for(k=0;k<2*i-1;k++){
+                string+=String.fromCharCode(k+65)
+            }
+            string+="\n"
+        }
+        console.log(string);
+    </script>
+</body>
+</html>

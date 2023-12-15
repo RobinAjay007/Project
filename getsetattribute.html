@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="https://www.instagram.com/" target="_blank" id="sample">Google Facebook Instagram!</a></p>
+    <button id="demo" type="submit">submit</button>
+    <script>
+        let a=document.getElementById("sample");
+        let b=a.getAttribute("href");
+        document.write(b+"<br>");
+        let c=a.getAttribute("target");
+        document.write(c+"<br>");
+        let d=a.getAttribute("id");
+        document.write(d+"<br>");
+        let e=document.getElementById("demo");
+        e.setAttribute("class","demo11");
+        console.log(e+"<br>");
+        a.setAttribute("href","https://www.google.com/");
+        let f=a.getAttribute("href");
+        document.write(f);
+        a.removeAttribute("target");
+        document.write(a);
+    </script>
+</body>
+</html>

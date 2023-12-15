@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dra{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="demo" class="tine">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium provident temporibus, esse architecto nulla possimus officiis debitis harum tempore illo numquam id autem sequi excepturi dolor nihil similique dolorem!
+    </p>
+    <div class="demo1 tine">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quam. Est, in nihil soluta animi nobis repellat. Eligendi nam rem inventore. Ipsum esse tenetur culpa id omnis amet quam est?</div>
+    <ul class="liquid-list">
+        <li>
+            coffee
+        </li>
+        <li>Raggi maal</li>
+        <li class="ch">chochlate coffee</li>
+        <li>Milk</li>
+    </ul> -->
+    <p class="aj" id="aja">Hi Robin am vernica your personal assisant</p>
+    <div class="dra" id="ev">Hi Robin am vernica your personal assisant</div>
+    <p id="new"></p>
+    <script>
+        // alert(document.documentElement.getAttribute("lang"));
+        // document.write(document.head.firstElementChild.nodeName+"<br>");
+        // console.log(document.body.style.background="purple");
+        // var a=document.getElementById("demo");
+        // a.style.background="orange";
+        // a.style.color="red";
+        // document.write(document.body.firstElementChild.nodeName+"<br>");
+        // var pa=document.getElementsByClassName("tine");
+        // document.write(pa.length+"<br>");
+        //  pa[1].style.fontWeight="bold";
+
+        // for(let i in pa){
+        //     pa[i].style.background="silver";
+        // }
+
+        // var c=document.getElementsByTagName("div");
+        // document.write(c.length);
+
+        // var list=document.querySelectorAll("ul li");
+        // document.write(list.length);
+        // var b=document.querySelectorAll("ul li.ch");
+        // b[0].style.textDecoration="line-through";
+
+        // var personal1=document.getElementsByClassName("aj");
+        // personal1[0].style.color="red";
+        // personal1[0].style.fontWeight="bold";
+        var personal1=document.getElementById("aja");
+        personal1.style.color="red";
+        personal1.style.fontWeight="bold";
+        document.write(personal1.style.color);
+
+        var b=window.getComputedStyle(personal1);
+        document.write(b);  
+        document.write(b.getPropertyValue("color"));
+
+        // it used to change the class name in the javascript
+        var c= document.getElementById("ev");
+        c.className="data";
+
+        var x=document.getElementById("ev").className;
+        document.getElementById("new").innerHTML=x;
+        c.classList.add("Ajay");
+        c.classList.remove("data");
+        c.classList.toggle("Robin");
+        c.classList.toggle("Ajay");
+
+        if(c.classList.contains("Robin")){
+            alert("exist");
+        }
+        else{
+            alert("does not exist");
+        }
+    </script>
+    
+</body>
+</html>
